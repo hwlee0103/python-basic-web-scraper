@@ -23,3 +23,6 @@ Chapter 1
   if-else with Truth Value Testing(is / is not)
 
 i'm testing commits using GUI gitKraken
+
+testing again...
+with setting local name and email.
