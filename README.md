@@ -24,3 +24,5 @@ Chapter 1
   for loop
   break
   string is also sequence
+  import - math
+  import calculator - my own file

@@ -51,3 +51,17 @@ for day in days:
 #strings are also sequence
 for letter in "Nicolas":
     print(letter)
+
+#import
+#import math
+#from math import ceil, fsum
+#print(math.ceil(1.2))
+#print(math.fabs(-1.2))
+#print(ceil(1.2))
+from math import fsum as first_sum
+#print(fsum([1, 2, 3, 4, 5, 6, 7]))
+print(first_sum([1, 2, 3, 4, 5, 6, 7]))
+
+#import calculator.py
+from ch1.calculator import plus, minus
+print(plus(1, 2), minus(1, 2))
