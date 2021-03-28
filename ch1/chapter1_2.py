@@ -31,3 +31,23 @@ def age_check(age):
 age_check(18)
 age_check(23)
 age_check(29)
+
+#for loop
+days = ("Mon", "Tue", "Wed", "Thu", "Fri")
+
+for x in days:
+    print(x)
+    
+for day in [1, 2, 3, 4, 5]:
+    print(day)
+
+#break
+for day in days:
+    if day is "Wed":
+        break
+    else:
+        print(day)
+
+#strings are also sequence
+for letter in "Nicolas":
+    print(letter)

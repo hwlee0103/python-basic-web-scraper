@@ -21,10 +21,6 @@ Chapter 1
 
   1-2
   if-else with Truth Value Testing(is / is not)
-
-i'm testing commits using GUI gitKraken
-
-testing again...
-with setting local name and email.
-
-why not working?
+  for loop
+  break
+  string is also sequence
