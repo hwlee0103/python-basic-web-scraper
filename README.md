@@ -26,3 +26,7 @@ Chapter 1
   string is also sequence
   import - math
   import calculator - my own file
+
+Web-Scraper
+
+- making web-scraper with python
