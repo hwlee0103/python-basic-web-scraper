@@ -15,18 +15,30 @@ indeed_soup = BeautifulSoup(indeed_result.text, "html.parser")
 pagination = indeed_soup.find("ul", {"class":"pagination-list"})
 #print(pagination)
 
-pages = pagination.find_all('a')
+#pages = pagination.find_all('a')
+links = pagination.find_all('a')
 #print(pages)
-spans = []
-for page in pages:
+#spans = []
+pages = []
+#for page in pages:
+#for link in links:
+for link in links[:-1]:
   #print(page.find("span"))
-  spans.append(page.find("span"))
-  #spans.append(page.find("b"))
+  #spans.append(page.find("span"))
+  #spans.append(link.find("span"))
+  #pages.append(link.find("span").string)
+  pages.append(int(link.string))
 
 #print(spans)
-print(spans[-1])
-print(spans[:-1])
-pans = spans[:-1]
+#print(spans[-1])
+#print(spans[:-1])
+#spans = spans[:-1]
+#print(pages)
+#last page
+print(pages[-1])
+#print(pages[:-1])
+#pages = pages[:-1]
+max_page = pages[-1]
 
 #-1 means from last item to first item
 #print(spans[-1])
