@@ -30,3 +30,7 @@ Chapter 1
 Web-Scraper
 
 - making web-scraper with python
+- sending requests
+
+indeed.py
+function: extracting_data_from_indeed
