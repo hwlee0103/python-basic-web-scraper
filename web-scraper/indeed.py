@@ -52,12 +52,21 @@ def extract_indeed_pages():
   print(range(max_page))
   return max_page
 
+##testing
 def extract_indeed_jobs(last_page):
   jobs = []
-  for page in range(last_page):
+  ##for page in range(last_page):
     #print(f"&start={page*LIMIT}")
-    result = requests.get(f"{URL}&start={page*LIMIT}")
-    print(result.status_cod
+    ##result = requests.get(f"{URL}&start={page*LIMIT}")
+    result = requests.get(f"{URL}&start={0*LIMIT}")
+    #print(result.status_code)
+    soup = BeautifulSoup(result.text, "html.parser")
+    results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
+    ##print(results)
     #result_code == 200 : request success
+    for result in results:
+      #print(result.find("div", {"class": "title"}).)
+      title = result.find("div", {"class": "title"}).find("a")["title"]
+      print(title)
   return jobs
 

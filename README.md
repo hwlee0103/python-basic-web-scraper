@@ -34,3 +34,4 @@ Web-Scraper
 
 indeed.py
 function: extracting_data_from_indeed
+function: extracting_data_of_job - extracting job title from html
