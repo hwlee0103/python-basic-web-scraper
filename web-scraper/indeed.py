@@ -55,18 +55,27 @@ def extract_indeed_pages():
 ##testing
 def extract_indeed_jobs(last_page):
   jobs = []
-  ##for page in range(last_page):
-    #print(f"&start={page*LIMIT}")
-    ##result = requests.get(f"{URL}&start={page*LIMIT}")
-    result = requests.get(f"{URL}&start={0*LIMIT}")
-    #print(result.status_code)
-    soup = BeautifulSoup(result.text, "html.parser")
-    results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
-    ##print(results)
-    #result_code == 200 : request success
-    for result in results:
-      #print(result.find("div", {"class": "title"}).)
-      title = result.find("div", {"class": "title"}).find("a")["title"]
-      print(title)
+##for page in range(last_page):
+  #print(f"&start={page*LIMIT}")
+  ##result = requests.get(f"{URL}&start={page*LIMIT}")
+  result = requests.get(f"{URL}&start={0*LIMIT}")
+  #print(result.status_code)
+  soup = BeautifulSoup(result.text, "html.parser")
+  results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
+  ##print(results)
+  #result_code == 200 : request success
+  for result in results:
+    #print(result.find("div", {"class": "title"}).)
+    title = result.find("h2", {"class": "title"}).find("a")["title"]
+    #print(title)
+    #sometimes company doesn't has link. so let's user if-else
+    #company = result.find("span", {"class":"company"}).find("a")
+    company = result.find("span", {"class":"company"})
+    company_anchor = company.find("a")
+    if company_anchor is not None:
+      print(str(company_anchor.string))
+    else:
+      print(str(company.string))
+    company = company.strip()
+    print(company)
   return jobs
-
