@@ -38,3 +38,8 @@ function: extracting_data_from_indeed
 function: extracting_data_of_job - extracting job title from html
 extract company names span>a>string
 .strip() to erase empty space string
+function:
+extract_job
+
+- extracting job items
+- make extracting part as a function like a module

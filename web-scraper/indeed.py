@@ -52,8 +52,20 @@ def extract_indeed_pages():
   print(range(max_page))
   return max_page
 
-def extract_jog(html):
-  
+def extract_job(html):
+  #print(result.find("div", {"class": "title"}).)
+    title = html.find("h2", {"class": "title"}).find("a")["title"]
+    #print(title)
+    #sometimes company doesn't has link. so let's user if-else
+    #company = result.find("span", {"class":"company"}).find("a")
+    company = html.find("span", {"class":"company"})
+    company_anchor = company.find("a")
+    if company_anchor is not None:
+      print(str(company_anchor.string))
+    else:
+      print(str(company.string))
+    company = company.strip()
+    return {'title': title, 'company': company}
 
 
 ##testing
@@ -69,17 +81,6 @@ def extract_indeed_jobs(last_page):
   ##print(results)
   #result_code == 200 : request success
   for result in results:
-    #print(result.find("div", {"class": "title"}).)
-    title = result.find("h2", {"class": "title"}).find("a")["title"]
-    #print(title)
-    #sometimes company doesn't has link. so let's user if-else
-    #company = result.find("span", {"class":"company"}).find("a")
-    company = result.find("span", {"class":"company"})
-    company_anchor = company.find("a")
-    if company_anchor is not None:
-      print(str(company_anchor.string))
-    else:
-      print(str(company.string))
-    company = company.strip()
-    print(company)
+    job = extract_job(result)
+    print(job)
   return jobs
