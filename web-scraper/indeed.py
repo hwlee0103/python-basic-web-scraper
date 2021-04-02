@@ -52,6 +52,10 @@ def extract_indeed_pages():
   print(range(max_page))
   return max_page
 
+def extract_jog(html):
+  
+
+
 ##testing
 def extract_indeed_jobs(last_page):
   jobs = []

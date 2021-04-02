@@ -31,6 +31,7 @@ Web-Scraper
 
 - making web-scraper with python
 - sending requests
+- get response and use it!
 
 indeed.py
 function: extracting_data_from_indeed
