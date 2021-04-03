@@ -61,26 +61,36 @@ def extract_job(html):
     company = html.find("span", {"class":"company"})
     company_anchor = company.find("a")
     if company_anchor is not None:
-      print(str(company_anchor.string))
+      #print(str(company_anchor.string))
+      company = str(company_anchor.string)
     else:
-      print(str(company.string))
+      #print(str(company.string))
+      company = str(company.string)
     company = company.strip()
-    return {'title': title, 'company': company}
+    #extract location
+    #location = html.find("span", {"class": "location"}).string
+    location = html.find("div", {"class": "recJobLoc"})["data-rc-loc"]
+    #print(location)
+    job_id = html["data-jk"]
+    #print(job_id)
+    return {'title': title, 'company': company, 'location': location, 'link': f"httpls://www.indeed.com/viewjob?jk{job_id}"}
 
 
 ##testing
 def extract_indeed_jobs(last_page):
   jobs = []
-##for page in range(last_page):
-  #print(f"&start={page*LIMIT}")
-  ##result = requests.get(f"{URL}&start={page*LIMIT}")
-  result = requests.get(f"{URL}&start={0*LIMIT}")
-  #print(result.status_code)
-  soup = BeautifulSoup(result.text, "html.parser")
-  results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
-  ##print(results)
-  #result_code == 200 : request success
-  for result in results:
-    job = extract_job(result)
-    print(job)
+  for page in range(last_page):
+    print(f"Scrapping page {page}")
+    #print(f"&start={page*LIMIT}")
+    result = requests.get(f"{URL}&start={page*LIMIT}")
+    #result = requests.get(f"{URL}&start={0*LIMIT}")
+    #print(result.status_code)
+    soup = BeautifulSoup(result.text, "html.parser")
+    results = soup.find_all("div", {"class": "jobsearch-SerpJobCard"})
+    ##print(results)
+    #result_code == 200 : request success
+    for result in results:
+      job = extract_job(result)
+      #print(job)
+      jobs.append(job)
   return jobs

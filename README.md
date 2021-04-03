@@ -43,3 +43,6 @@ extract_job
 
 - extracting job items
 - make extracting part as a function like a module
+
+main.py
+save extracted job info to jobs array and print from main.py
