@@ -59,16 +59,19 @@ def extract_job(html):
     #sometimes company doesn't has link. so let's user if-else
     #company = result.find("span", {"class":"company"}).find("a")
     company = html.find("span", {"class":"company"})
-    company_anchor = company.find("a")
-    if company_anchor is not None:
-      #print(str(company_anchor.string))
-      company = str(company_anchor.string)
-    else:
-      #print(str(company.string))
-      company = str(company.string)
-    company = company.strip()
+    if company:
+      company_anchor = company.find("a")
+      if company_anchor is not None:
+        #print(str(company_anchor.string))
+        company = str(company_anchor.string)
+      else:
+        #print(str(company.string))
+        company = str(company.string)
+      company = company.strip()
     #extract location
     #location = html.find("span", {"class": "location"}).string
+    else:
+      company = None
     location = html.find("div", {"class": "recJobLoc"})["data-rc-loc"]
     #print(location)
     job_id = html["data-jk"]

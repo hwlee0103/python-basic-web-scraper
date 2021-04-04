@@ -50,3 +50,8 @@ main.py
 save extracted job info to jobs array and print from main.py
 import function from indeed.py
 as get_indeed_jobs instead of using it on main and import other many functions.
+
+soverflow.py
+:extract job informations from stackoverflow
+get_jobs():
+extracting job infos; function like a button starts all the work
