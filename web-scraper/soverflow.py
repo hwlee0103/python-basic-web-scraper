@@ -26,8 +26,11 @@ def extract_job(html):
     #company = company_row[0]
     #location = company_row[1]
     #print(company.string, location.string)
-    print(company.get_text(strip=True).strip("-"), location.get_text(strip=True).strip("-"))
-    return {'title': title}
+    #print(company.get_text(strip=True).strip("-"), location.get_text(strip=True).strip("-"))
+    company = company.get_text(strip=True)
+    location = location.get_text(strip=True).strip("-").strip(" \r").strip("\n")
+    print(company, location)
+    return {'title': title, 'company': company, 'location': location}
 
 def extract_jobs(last_page):
     jobs = []
