@@ -56,3 +56,6 @@ soverflow.py
 get_jobs():
 extracting job infos; function like a button starts all the work
 get job id to make apply link
+
+learningcsv
+file about & practicing csv
