@@ -83,7 +83,8 @@ def extract_job(html):
 def extract_jobs(last_page):
   jobs = []
   for page in range(last_page):
-    print(f"Scrapping page {page}")
+    print(f"Scrapping Indeed Page: {page}")
+    #print(f"Scrapping page {page}")
     #print(f"&start={page*LIMIT}")
     result = requests.get(f"{URL}&start={page*LIMIT}")
     #result = requests.get(f"{URL}&start={0*LIMIT}")

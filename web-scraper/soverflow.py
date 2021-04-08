@@ -29,12 +29,14 @@ def extract_job(html):
     #print(company.get_text(strip=True).strip("-"), location.get_text(strip=True).strip("-"))
     company = company.get_text(strip=True)
     location = location.get_text(strip=True).strip("-").strip(" \r").strip("\n")
-    print(company, location)
-    return {'title': title, 'company': company, 'location': location}
+    #print(company, location)
+    job_id = html['data-jobid']
+    return {'title': title, 'company': company, 'location': location, 'apply_link':f"https://stackoverflow.com/jobs/{job_id}"}
 
 def extract_jobs(last_page):
     jobs = []
     for page in range(last_page):
+        print(f"Scrapping StackOverflow Page: {page}")
         #print(page + 1)
         result = requests.get(f"{URL}&pg={page+1}")
         #print(result.status_code)
@@ -43,6 +45,7 @@ def extract_jobs(last_page):
         for result in results:
             #print(result["data-jobid"])
             job = extract_job(result)
+            #print(job)
             jobs.append(job)
     return jobs
 

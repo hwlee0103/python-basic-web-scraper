@@ -55,3 +55,4 @@ soverflow.py
 :extract job informations from stackoverflow
 get_jobs():
 extracting job infos; function like a button starts all the work
+get job id to make apply link
