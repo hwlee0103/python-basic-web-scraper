@@ -59,3 +59,7 @@ get job id to make apply link
 
 learningcsv
 file about & practicing csv
+
+save.py
+open and make a csv file
+write and save scraped job infos to csv file
