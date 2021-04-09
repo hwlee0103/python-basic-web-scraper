@@ -54,4 +54,4 @@ def get_jobs():
     #print(last_page)
     jobs = extract_jobs(last_page)
     #jobs = extract_jobs(2)
-    return []
+    return jobs
