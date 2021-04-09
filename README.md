@@ -63,3 +63,7 @@ file about & practicing csv
 save.py
 open and make a csv file
 write and save scraped job infos to csv file
+
+ch3_django
+getting ready for Django
+: learning python basics useful for Django
