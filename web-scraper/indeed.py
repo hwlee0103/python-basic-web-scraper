@@ -76,7 +76,7 @@ def extract_job(html):
     #print(location)
     job_id = html["data-jk"]
     #print(job_id)
-    return {'title': title, 'company': company, 'location': location, 'link': f"httpls://www.indeed.com/viewjob?jk{job_id}"}
+    return {'title': title, 'company': company, 'location': location, 'link': f"httpls://www.indeed.com/viewjob?jk={job_id}"}
 
 
 ##testing
