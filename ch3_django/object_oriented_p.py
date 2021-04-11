@@ -12,3 +12,6 @@ porche.color = "Red"
 print(porche)
 print(porche.windows)
 print(porche.color)
+
+ferrari = Car()
+ferrari.color = "Yellow"
