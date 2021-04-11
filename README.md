@@ -69,4 +69,5 @@ getting ready for Django
 : learning python basics useful for Django
 object_oriented_p.py
 : learning about oop
-; class & examples
+; class & examples & instances
+; method: function inside of class
