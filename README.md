@@ -71,3 +71,7 @@ object_oriented_p.py
 : learning about oop
 ; class & examples & instances
 ; method: function inside of class
+; other methods: dir, **str**, and etc.
+; override methods
+; set **init** method
+-> using kwargs
