@@ -20,16 +20,41 @@ class Car():
         #return "lalalalalala"
         return f"Car with {self.wheels} wheels"
 
-#method
+    #method
     def start(self):
         print(self.doors)
         print("I started")
 
+    #convertable car as an example
+    #def take_off(self):
+     #   return "taking off"
+
+#extend class
+class Convertible(Car):
+
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.time = kwargs.get("time", 10)
+
+    def take_off(self):
+        return "taking off"
+    
+    def __str__(self):
+        return f"Car with no roof"
+
+#extend class
+class Something(Convertible):
+    pass
+
+
 #make porche as an example
-porche = Car(color="green", price="$40")
+#porche = Car(color="green", price="$40")
+porche = Convertible(color="green", price="$40")
 #porche.color = "Red"
 print(porche)
 print(porche.color, porche.price)
+porche.take_off()
+print(porche.wheels)
 #print(porche.windows)
 #print(porche.color)
 

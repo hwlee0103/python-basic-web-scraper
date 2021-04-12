@@ -75,3 +75,4 @@ object_oriented_p.py
 ; override methods
 ; set **init** method
 -> using kwargs
+; extending class: Convertible()
