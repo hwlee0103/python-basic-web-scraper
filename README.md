@@ -76,3 +76,11 @@ object_oriented_p.py
 ; set **init** method
 -> using kwargs
 ; extending class: Convertible()
+
+TODO:
+wep scraper 확장시키기
+: indeed와 stackoverflow에서 scrape할 것인데, python을 비롯하여 사용자가 입력하는 go, java등의 언어로도 job검색이 가능하도록
+: 모두가 사용할 수 있는 웹 페이지를 만드는 것이 목표
+: csv로 저장하지 않고 웹 사이트에 검색 결과를 띄워줄 예정.
+: 파일 다운로드가 가능한 버튼을 만들어 추가하여 csv 다운로드를 사용자가 원한다면 할 수 있도록!
+: Flask라는 micro-framework 사용해보기
