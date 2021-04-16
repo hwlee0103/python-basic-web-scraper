@@ -8,4 +8,16 @@ wep scraper 확장시키기
 
 for Repl.it
 
-1. Flask Package install (add)
+1. Flask Package install (add) and import
+
+2. app.route
+; def home():
+-> define route page's html
+
+3. app.run(host)
+; run web page with host; 
+
+4. make template
+; potato.html
+-> to use html code
+( not in python code, separate as html source )
