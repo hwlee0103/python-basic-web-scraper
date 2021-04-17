@@ -21,3 +21,6 @@ for Repl.it
 ; potato.html
 -> to use html code
 ( not in python code, separate as html source )
+
+5. give form action
+;
