@@ -19,9 +19,13 @@ def get_last_page():
 def extract_job(html):
     #html changed :)
     title = html.find("h2", {"class":"mb4"}).find("a")["title"]
+    #below line could be okay?
+    #title = html.find("h2").find("a")["title"]
     #print(title)
     #company_row = html.find("h3", {"class":"mb4"}).find_all("span", recursive=False)
     company, location = html.find("h3", {"class":"mb4"}).find_all("span", recursive=False)
+    #below line could be okay?
+    #company, location = html.find("h3").find_all("span", recursive=False)
     #print(company_row)
     #company = company_row[0]
     #location = company_row[1]

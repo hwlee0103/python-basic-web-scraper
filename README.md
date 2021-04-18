@@ -76,3 +76,5 @@ object_oriented_p.py
 ; set **init** method
 -> using kwargs
 ; extending class: Convertible()
+
+\*\* need to keep updating source ince web-site's html could be changed

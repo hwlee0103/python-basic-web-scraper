@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request
-
+from flask import Flask, render_template, request, redirect
+from scrapper import get_jobs
 app = Flask("SuperScrapper")
 
 @app.route("/")
@@ -12,6 +12,12 @@ def home():
 def report():
     #print(request.args.get('word'))
     word = request.args.get('word')
+    if word:
+        word = word.lower()
+        jobs = get_jobs(word)
+        print(jobs)
+    else:
+        return redirect("/")
     return render_template("report.html", searchingBy=word, potato="hello")
     #return f"You are looking for a job in {word}"
     #return "this is the report"

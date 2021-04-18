@@ -24,3 +24,5 @@ for Repl.it
 
 5. give form action
 ;
+
+6. combine job scrapper with current web-site
