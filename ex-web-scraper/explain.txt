@@ -26,3 +26,6 @@ for Repl.it
 ;
 
 6. combine job scrapper with current web-site
+
+7. make db
+; save scraped info 'jobs' to varlable 'db'
