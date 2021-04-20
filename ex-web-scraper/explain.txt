@@ -29,3 +29,5 @@ for Repl.it
 
 7. make db
 ; save scraped info 'jobs' to varlable 'db'
+
+8. rendering job infos to report.html
