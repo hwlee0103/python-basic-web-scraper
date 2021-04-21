@@ -28,6 +28,25 @@ def report():
     #return f"You are looking for a job in {word}"
     #return "this is the report"
 
+@app.route("/export")
+def export():
+    try:
+        word = request.args.get('word')
+        if not word:
+            raise Exception()
+        word = word.lower()
+        jobs = db.get(word)
+        if not jobs:
+            raise Exception()
+        return f"Generate CSV for {word}"
+    except:
+        return redirect("/")
+    #word = request.args.get('word')
+    #if word:
+    #    word = word.lower()
+    #else:
+    #    return redirect("/")
+
 #@app.route("/contact")
 @app.route("/<username>")
 #def contact():

@@ -31,3 +31,7 @@ for Repl.it
 ; save scraped info 'jobs' to varlable 'db'
 
 8. rendering job infos to report.html
+
+9. make /export app.route
+; to save job infos and create csv if user want
+; used try-except
