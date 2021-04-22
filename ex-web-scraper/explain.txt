@@ -35,3 +35,6 @@ for Repl.it
 9. make /export app.route
 ; to save job infos and create csv if user want
 ; used try-except
+
+10. save searched result as csv file
+; use exporter.py
